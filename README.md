@@ -13,6 +13,8 @@ The [raw ngs data](https://github.com/aerijman/Transcriptional-Activation-Domain
 ----
 Codes/Scripts
 --------------------
+Stored at s3://fh-pi-hahn-s/
+
 ```python
 if we use batch from aws:
   faster=True
@@ -26,7 +28,7 @@ No lisence yet
 
 Authors
 ---------------
-Ariel Erijman & Lukasz Kozlowski
+Ariel Erijman & Lukasz Kozlowski<br>
 Linda Warfield<br>
 Johannes Soding<br>
 Steve Hahn
