@@ -15,7 +15,9 @@ Codes/Scripts
 --------------------
 ```python
 if we use batch from aws:
-  fast=True
+  faster=True
+else:
+  no_GPU
 ```
 LICENSE
 -------------
@@ -24,7 +26,7 @@ No lisence yet
 
 Authors
 ---------------
-Ariel Erijman & Lukasz Kozlowski  
-Linda Warfield
-Johannes Soding
+Ariel Erijman & Lukasz Kozlowski
+Linda Warfield<br>
+Johannes Soding<br>
 Steve Hahn
