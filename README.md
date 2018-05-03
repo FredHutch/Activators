@@ -4,7 +4,7 @@ Transcriptional-Activation-Domains
 ---
 About
 -----
-<p>ADs were randomly created and screened from yeast using FACS, where GFP fluorescence is correlated with AD's strength</p> 
+<p>ADs were randomly created and screened in yeast using FACS, where GFP fluorescence is correlated with AD's strength</p> 
 <p><img style="float: right;" src ="https://github.com/aerijman/Transcriptional-Activation-Domains/blob/master/FACS_example.jpg" width="300" height="300" /></p>. 
 <p></p>
 
