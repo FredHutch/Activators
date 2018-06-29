@@ -13,14 +13,19 @@ The raw ngs data will be uploaded to [SRA](https://www.ncbi.nlm.nih.gov/sra/) an
 ----
 Codes/Scripts
 --------------------
-Stored at s3://fh-pi-hahn-s/
-
+Here
 ```python
 if we use batch from aws:
   faster=True
 else:
   no_GPU
 ```
+
+---
+Data stored @
+---------------------------
+s3://fh-pi-hahn-s/
+
 LICENSE
 -------------
 No lisence yet
