@@ -32,9 +32,12 @@ model.compile(loss='categorical_crossentropy',
 			  optimizer='rmsprop',
 			  metrics=['accuracy'])
 
-model.fit(Xtrain, ytrain,
-		  batch_size=128,
-		  epochs=100,
-		  validation_split=0.3,
-		  verbose=0)
+h = model.fit(Xtrain[:500], ytrain[:500],
+			  batch_size=128,
+			  epochs=1,
+			  validation_split=0.3,
+			  verbose=0)
+
+pd.DataFrame(h.history).to_csv('model_evaluation.csv')
+
 
