@@ -22,9 +22,9 @@ else:
 ```
 
 ---
-Data stored @
+Data stored
 ---------------------------
-s3://fh-pi-hahn-s/
+@ s3://fh-pi-hahn-s/
 
 LICENSE
 -------------
