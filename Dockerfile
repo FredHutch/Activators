@@ -1,3 +1,5 @@
+# build as fredhutch/activators
+
 FROM gw000/keras-full:latest
 
 USER root
