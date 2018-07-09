@@ -4,7 +4,7 @@ FROM gw000/keras-full:latest
 
 USER root
 
-RUN apt-get update -y && apt-get install -y curl
+RUN apt-get update -y && apt-get install -y curl unzip
 
 RUN pip3 install awscli
 
