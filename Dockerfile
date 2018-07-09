@@ -14,7 +14,7 @@ RUN chmod +x /usr/local/bin/fetch_and_run.sh
 
 ENV PATH="/usr/local/bin:${PATH}"
 
-USER USER
+USER user
 
 ENV PATH="/usr/local/bin:${PATH}"
 
