@@ -8,6 +8,7 @@ About
 <p><img style="float: right;" src ="https://github.com/aerijman/Transcriptional-Activation-Domains/blob/master/FACS_example.jpg" width="300" height="300" /></p>. 
 <p></p>
 
+<<<<<<< HEAD
 <p>Oligomers of DNA, consisting of 90 nucleotides were designed to randomly contain equal chance of any of the 20 amino-acids at each position. This 90 bp long randomized fragment is encoded in a plasmid (one or two copies of the plasmid per cell) upstream of the DNA Binding Domain of the yeast activator Gcn4. The plasmids were transformed into yeast strains containing GFPe as a reporter gene.</p>
 <p>agregar figure aca</p>
 <p>Cells were FACS sorted based on their green fluorescence intensity and splitted into 4 bins of increasing fluorescence intensity and sent for sequencing.<p>
@@ -19,6 +20,9 @@ About
 <p>Three experiments were conducted, using different promoters to activate transcription of reporter gene: ARG3, ARG1 and ILV6.</p> 
 
 The raw ngs data will be uploaded to [SRA](https://www.ncbi.nlm.nih.gov/sra/).
+=======
+The raw ngs data will be uploaded to [SRA](https://www.ncbi.nlm.nih.gov/sra/) and all codes could be just placed here.
+>>>>>>> 9e2c8cf323c6becfaa217bceb864df01cbdd8bfb
 
 
 ---
