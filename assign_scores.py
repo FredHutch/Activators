@@ -36,17 +36,24 @@ ARG3_bins = [[120, 400], [400, 640], [640, 1000], [1010, 1600]]
 
 # <promoter>_factor variables handy to use
 for i in ['ARG1','ARG3','ILV6']:
-	bins = i+'_bins'
-	factor = i+'_factor' 
-	vars()[factor] = np.mean(  np.vstack(eval(bins)), axis=1  )
+    bins = i+'_bins'
+    factor = i+'_factor' 
+    vars()[factor] = np.mean(  np.vstack(eval(bins)), axis=1  )
 
 
 def join_bins(promoter):
-	promoter = promoter.upper()
+    promoter = promoter.upper()
     filenames = [promoter+"_bin"+str(i)+".counter" for i in range(1,5)] + [promoter+'_pre_sorting.counter']
     dfs = [pd.read_csv(i, header=None, names=['seq',i[5:9]]).set_index('seq') for i in filenames]
     df = pd.concat(dfs, axis=1, sort=True).fillna(0)
-	return df
+    return df
+
+def join_cenntroids(promoter):
+    promoter = promoter.upper()
+    filenames = [promoter+"_bin"+str(i)+"_centroids.csv" for i in range(1,5)] + [promoter+'_pre_sorting.counter']
+    dfs = [pd.read_csv(i, header=None, names=['seq',i[5:9]]).set_index('seq') for i in filenames]
+    df = pd.concat(dfs, axis=1, sort=True).fillna(0)
+    return df
 
 # fx to calculate the score of the sequence based on its reads in background and bins 
 def assign_score(promoter, df):

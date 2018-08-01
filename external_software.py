@@ -5,10 +5,11 @@ import pandas as pd
 import numpy as np
 from time import time
 
-if len(sys.argv)<1:
+if len(sys.argv)<2:
     print('*'*60)
     print('python Step_5.py <long | short>\n')
     print('*'*60)
+    sys.exit(1)
 
 SHORT_or_LONG = sys.argv[1]
 

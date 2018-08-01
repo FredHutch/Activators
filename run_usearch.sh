@@ -8,5 +8,5 @@
 
 folder=./clusters/${1:5:-6}
 mkdir ${folder}
-usearch -cluster_fast $1 -id 0.2 -clusters ${folder}
+usearch -cluster_fast $1 -id 0.2 -clusters ${folder}/c
 

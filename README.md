@@ -5,39 +5,27 @@ Transcriptional-Activation-Domains
 About
 -----
 <p>ADs were randomly created and screened in yeast using FACS, where GFP fluorescence is correlated with AD's strength</p> 
-<p><img style="float: right;" src ="https://github.com/aerijman/Transcriptional-Activation-Domains/blob/master/FACS_example.jpg" width="300" height="300" /></p>. 
+<p><img style="float: right;" src ="https://github.com/aerijman/Transcriptional-Activation-Domains/blob/master/figures/FACS_example.jpg" width="300" height="300" /></p>. 
 <p></p>
 
-<<<<<<< HEAD
 <p>Oligomers of DNA, consisting of 90 nucleotides were designed to randomly contain equal chance of any of the 20 amino-acids at each position. This 90 bp long randomized fragment is encoded in a plasmid (one or two copies of the plasmid per cell) upstream of the DNA Binding Domain of the yeast activator Gcn4. The plasmids were transformed into yeast strains containing GFPe as a reporter gene.</p>
-<p>agregar figure aca</p>
+<p><img style="float: right;" src ="https://github.com/aerijman/Transcriptional-Activation-Domains/blob/master/figures/figure2.jpg" width="300" height="300" /></p>
 <p>Cells were FACS sorted based on their green fluorescence intensity and splitted into 4 bins of increasing fluorescence intensity and sent for sequencing.<p>
-<p>agregar figures</p>
+<p><img style="float: right;" src ="https://github.com/aerijman/Transcriptional-Activation-Domains/blob/master/figures/figure3.jpg" width="300" height="300" /></p>
 <p>Sequencing was paired-end (Illumina), 100nt reads with 7nt overlap between read1 and read2.</p>
-<p>figrue</p>
+<p>include figrue</p>
 <p>18 mutants from the library were individually expressed and the fluorescence intensity was measured. Scores were validated in this small set.</p> 
 <p>include figure</p>
-<p>Three experiments were conducted, using different promoters to activate transcription of reporter gene: ARG3, ARG1 and ILV6.</p> 
-
-The raw ngs data will be uploaded to [SRA](https://www.ncbi.nlm.nih.gov/sra/).
-=======
-The raw ngs data will be uploaded to [SRA](https://www.ncbi.nlm.nih.gov/sra/) and all codes could be just placed here.
->>>>>>> 9e2c8cf323c6becfaa217bceb864df01cbdd8bfb
+<p>Three experiments were conducted, using different promoters to activate transcription of a GFP reporter gene: ARG3, ARG1 and ILV6.</p> 
 
 
 ---
-Data stored
----------------------------
+Data 
+------
 
-## Fastq files:
+### Fastq files:
 
 * Folder containing the Fastq files for **ARG3** --> `s3://fh-pi-hahn-s/Activators/data/151203/fastq/`
-* Folder containing the Fastq files for **ARG1** and **ILV6** --> `s3://fh-pi-hahn-s/Activators/data/170413/fastq/`
-
-* Following the specific locations of each experiment.<br><br>
-
-<p style="background-color:rgb(0, 204, 255); color:black; width: 600px;">
-<b>ARG3</b>
 <ul>
     bin1: [Sample_O1-1, Sample_O2-1]<br>
     bin2: [Sample_O1-2, Sample_O2-2]<br>
@@ -45,53 +33,55 @@ Data stored
     bin4: [Sample_O1-4, Sample_O2-4]<br>
     pre_sorting: Sample_O1-18_8_15, Sample_O2-18_8_15, Sample_O1-7_8_15
 </ul>
-<b>ARG1</b>
+
+* Folder containing the Fastq files for **ARG1** and **ILV6** --> `s3://fh-pi-hahn-s/Activators/data/170413/fastq/`
 <ul>
-    bin1: Sample_GCTACGC<br>
+	bin1: Sample_GCTACGC<br>
     bin2: Sample_CGAGGCT<br>
     bin3: Sample_AAGAGGC<br>
     bin4: Sample_GTAGAGG<br>
-    pre_sorting: Sample_CGTACTA<br>
-</ul>
-<b>ILV6</b>
-<ul>
-    bin1: Sample_GGACTCC<br>
+    pre_sorting: Sample_CGTACTA<br><br>
+    
+	bin1: Sample_GGACTCC<br>
     bin2: Sample_TAGGCAT<br>
     bin3: Sample_CTCTCTA<br>
     bin4: Sample_CAGAGAG<br>
     pre_sorting: Sample_TAAGGCG<br>
 </ul>
-</p>
 
-## paired reads translated to aminoacids:
+### paired reads translated to aminoacids:
+
 **ARG3**: 			`s3://fh-pi-hahn-s/Activators/data/151203/protein_fasta`<br>
-</span>
-* `ARG3_bin1.fasta`
-* `ARG3_bin2.fasta`
-* `ARG3_bin3.fasta`
-* `ARG3_bin4.fasta`
-* `ARG1_presorting.fasta`
-
+<ul>
+ ARG3\_bin1.fasta
+ ARG3\_bin2.fasta
+ ARG3\_bin3.fasta
+ ARG3\_bin4.fasta
+ ARG1\_presorting.fasta
+</ul>
 **ARG1** and **ILV6**: `s3://fh-pi-hahn-s/Activators/data/170413/protein_fasta`<br>
-* `ARG1_bin1.fasta`
-* `ARG1_bin2.fasta`
-* `ARG1_bin3.fasta`
-* `ARG1_bin4.fasta`
-* `ARG1_presorting.fasta`
-* `ILV6_bin1.fasta`
-* `ILV6_bin2.fasta`
-* `ILV6_bin3.fasta`
-* `ILV6_bin4.fasta`
-* `ILV6_presorting.fasta`
+<ul>
+ ARG1\_bin1.fasta
+ ARG1\_bin2.fasta
+ ARG1\_bin3.fasta
+ ARG1\_bin4.fasta
+ ARG1\_presorting.fasta<br>
+ ILV6\_bin1.fasta
+ ILV6\_bin2.fasta
+ ILV6\_bin3.fasta
+ ILV6\_bin4.fasta
+ ILV6\_presorting.fasta
+</ul>
 
-## centroids after redundancy filtering (usearch)
-**ARG3**: 			   	 `s3://fh-pi-hahn-s/Activators/data/151203/centroids_usearch`
+### centroids after redundancy filtering (usearch)
+
+**ARG3**: 			   	 `s3://fh-pi-hahn-s/Activators/data/151203/centroids_usearch` <br>
 **ARG1** and **ILV6**:   `s3://fh-pi-hahn-s/Activators/data/170413/centroids_usearch`
 
-## Experimental Fluorescence measurements used to calculate scores to use in regression models and potentially to split data-set into positives and negatives. This scores were developed with ARG3 data.
+### Experimental Fluorescence measurements used to calculate scores to use in regression models and potentially to split data-set into positives and negatives. 
 `s3://fh-pi-hahn-s/Activators/data/`
 
-## Additional data to use as predictors
+### Additional data to use as predictors
 hydrophobicity values for aa --> `s3://fh-pi-hahn-s/Activators/data/hydrophobicities.txt`
 
 ---
