@@ -5,7 +5,7 @@ Transcriptional-Activation-Domains
 About
 -----
 <p>ADs were randomly created and screened in yeast using FACS, where GFP fluorescence is correlated with AD's strength</p> 
-<p><img style="float: right;" src ="./figures/FACS_example.jpg" width="300" height="300" /></p>. 
+<p><img style="float: right;" src ="figures/FACS_example.jpg" width="300" height="300" /></p>. 
 <p></p>
 
 <p>Oligomers of DNA, consisting of 90 nucleotides were designed to randomly contain equal chance of any of the 20 amino-acids at each position. This 90 bp long randomized fragment is encoded in a plasmid (one or two copies of the plasmid per cell) upstream of the DNA Binding Domain of the yeast activator Gcn4. The plasmids were transformed into yeast strains containing GFPe as a reporter gene.</p>
