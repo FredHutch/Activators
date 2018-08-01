@@ -36,13 +36,13 @@ Data
 
 * Folder containing the Fastq files for **ARG1** and **ILV6** --> `s3://fh-pi-hahn-s/Activators/data/170413/fastq/`
 <ul>
-	bin1: Sample_GCTACGC<br>
+    bin1: Sample_GCTACGC<br>
     bin2: Sample_CGAGGCT<br>
     bin3: Sample_AAGAGGC<br>
     bin4: Sample_GTAGAGG<br>
-    pre_sorting: Sample_CGTACTA<br><br>
+    pre_sorting: Sample_CGTACTA<br>
     
-	bin1: Sample_GGACTCC<br>
+    bin1: Sample_GGACTCC<br>
     bin2: Sample_TAGGCAT<br>
     bin3: Sample_CTCTCTA<br>
     bin4: Sample_CAGAGAG<br>
@@ -51,31 +51,31 @@ Data
 
 ### paired reads translated to aminoacids:
 
-**ARG3**: 			`s3://fh-pi-hahn-s/Activators/data/151203/protein_fasta`<br>
+**ARG3**:           `s3://fh-pi-hahn-s/Activators/data/151203/protein_fasta`<br>
 <ul>
- ARG3\_bin1.fasta
- ARG3\_bin2.fasta
- ARG3\_bin3.fasta
- ARG3\_bin4.fasta
- ARG1\_presorting.fasta
+    ARG3\_bin1.fasta
+    ARG3\_bin2.fasta
+    ARG3\_bin3.fasta
+    ARG3\_bin4.fasta
+    ARG1\_presorting.fasta
 </ul>
-**ARG1** and **ILV6**: `s3://fh-pi-hahn-s/Activators/data/170413/protein_fasta`<br>
+**ARG1** & **ILV6**: `s3://fh-pi-hahn-s/Activators/data/170413/protein_fasta`<br>
 <ul>
- ARG1\_bin1.fasta
- ARG1\_bin2.fasta
- ARG1\_bin3.fasta
- ARG1\_bin4.fasta
- ARG1\_presorting.fasta<br>
- ILV6\_bin1.fasta
- ILV6\_bin2.fasta
- ILV6\_bin3.fasta
- ILV6\_bin4.fasta
- ILV6\_presorting.fasta
+    ARG1\_bin1.fasta
+    ARG1\_bin2.fasta
+    ARG1\_bin3.fasta
+    ARG1\_bin4.fasta
+    ARG1\_presorting.fasta<br>
+    ILV6\_bin1.fasta
+    ILV6\_bin2.fasta
+    ILV6\_bin3.fasta
+    ILV6\_bin4.fasta
+    ILV6\_presorting.fasta
 </ul>
 
 ### centroids after redundancy filtering (usearch)
 
-**ARG3**: 			   	 `s3://fh-pi-hahn-s/Activators/data/151203/centroids_usearch` <br>
+**ARG3**:                `s3://fh-pi-hahn-s/Activators/data/151203/centroids_usearch` <br>
 **ARG1** and **ILV6**:   `s3://fh-pi-hahn-s/Activators/data/170413/centroids_usearch`
 
 ### Experimental Fluorescence measurements used to calculate scores to use in regression models and potentially to split data-set into positives and negatives. 
@@ -89,26 +89,26 @@ Codes/Scripts
 --------------------
 All codes are stored in `s3:/fh-pi-hahn-s/Activators/codes` and if run without arguments will display HELP message.
 
-1. <span style="background-color:#33DAFF; color:black">FLASH\_wrapper.py</span> 	  --> Paires R1 and R2 from all experiments. 
-2. <span style="background-color:#33DAFF; color:black">translate.py</span> 	  	  --> Translates the paired reads into proteins. 
-	- This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length
-3. <span style="background-color:#33DAFF: color:black">assign\_scores.py</span>		 --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.
+1. <span style="background-color:#33DAFF; color:black">FLASH\_wrapper.py</span>       --> Paires R1 and R2 from all experiments. 
+2. <span style="background-color:#33DAFF; color:black">translate.py</span>        --> Translates the paired reads into proteins. 
+    - This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length
+3. <span style="background-color:#33DAFF: color:black">assign\_scores.py</span>      --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.
 4. <span style="background-color:#33DAFF; color:black">run\_usearch.sh</span>          --> runs programm usearch with predefined parameters. Different bins and pre\_sorting are clustered individualy, since the redundancy should have came to each of them separately.
 5. <span style="background-color:#33DAFF; color:black">clusters.py</span>          --> Desicion of what sequences to take from usearch clusters.
 6. <span style="background-color:#33DAFF; color:black">external\_software.sh</span> --> Runs external software: IUPred and PSIpred.
-7. <span style="background-color:#33DAFF; color:black">prepare4depp.py</span>	  --> Prepare data for deep learning.
-	- Some of the centroids are probably under-represented in the library and we can consider them as noise. Hence, this script tries to make a more robust desicion on what sequence should be taken from each cluster.
-8. <span style="background-color:#33DAFF; color:black">simple\_lerners.py</span>	  --> train and test random\_forest and logistic regression as benchmark to compare to models that incorporate sequential ordering.
+7. <span style="background-color:#33DAFF; color:black">prepare4depp.py</span>     --> Prepare data for deep learning.
+    - Some of the centroids are probably under-represented in the library and we can consider them as noise. Hence, this script tries to make a more robust desicion on what sequence should be taken from each cluster.
+8. <span style="background-color:#33DAFF; color:black">simple\_lerners.py</span>      --> train and test random\_forest and logistic regression as benchmark to compare to models that incorporate sequential ordering.
 
 
-|   script name        |  input               | output                                    						     |
+|   script name        |  input               | output                                                               |
 |:--------------------:|:--------------------:|:--------------------------------------------------------------------:|
-|FLASH\_wrapper.py 	   |promoter (e.g. ARG3)  |<path><bin>bin.fasta, where path=promoter, bin={1..4} and pre\_sorting|
-|translate.py      	   |<path><bin>bin.fasta  |promoter\_bin.fasta & promoter\_bin.counter, output=statistics(stdout)|
-|run\_usearch.sh	   |fasta file			  |./clusters/promoter/cluster${i} with i={0..#clusters}				 |
-|clusters.py           |promoter (e.g. ARG3)  |<promoter>\_ALLcentroids\_reads.csv file							     |
-|external\_software.sh |long, short, glob	  |csv file with p(disorder). Indices=seqs								 |
-|prepare4deep.py	   |   
+|FLASH\_wrapper.py     |promoter (e.g. ARG3)  |<path><bin>bin.fasta, where path=promoter, bin={1..4} and pre\_sorting|
+|translate.py          |<path><bin>bin.fasta  |promoter\_bin.fasta & promoter\_bin.counter, output=statistics(stdout)|
+|run\_usearch.sh       |fasta file            |./clusters/promoter/cluster${i} with i={0..#clusters}                 |
+|clusters.py           |promoter (e.g. ARG3)  |<promoter>\_ALLcentroids\_reads.csv file                              |
+|external\_software.sh |long, short, glob     |csv file with p(disorder). Indices=seqs                               |
+|prepare4deep.py       |   
 
 
 ---
