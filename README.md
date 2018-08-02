@@ -124,3 +124,8 @@ Jacob Schreiber<br>
 Johannes Soding<br>
 William Stafford Noble<br>
 Steve Hahn
+
+---
+TODO
+------
+Make a file containing ALL parameters used in all different scripts to track all changes without surpises.
