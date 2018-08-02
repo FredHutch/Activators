@@ -1,0 +1,2 @@
+cp these 3 files to the folder where the .tex file is going to be compiled to pdf and after obtaining pdf, remove the files from the working directory.
+
