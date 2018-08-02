@@ -4,19 +4,18 @@ Transcriptional-Activation-Domains
 ---
 About
 -----
-<p>ADs were randomly created and screened in yeast using FACS, where GFP fluorescence is correlated with AD's strength</p> 
+<p>Random libraries of potential Transcriptional activator domains (TADs) were screened in yeast using FACS, where GFP fluorescence is correlated with TAD's strength</p> 
 <p><img style="float: right;" src ="https://raw.githubusercontent.com/FredHutch/Activators/master/figures/FACS_example.jpg" width="300" height="300" /></p>. 
-<p></p>
 
-<p>Oligomers of DNA, consisting of 90 nucleotides were designed to randomly contain equal chance of any of the 20 amino-acids at each position. This 90 bp long randomized fragment is encoded in a plasmid (one or two copies of the plasmid per cell) upstream of the DNA Binding Domain of the yeast activator Gcn4. The plasmids were transformed into yeast strains containing GFPe as a reporter gene.</p>
+<p>Briefly, oligomers of DNA, consisting of 90 nucleotides (coding for 30 aa-long peptides) were designed to randomly contain equal chance of any of the 20 amino-acids at each position. These 90 bp long randomized fragments were encoded in a plasmid (one or two copies of the plasmid per cell) upstream of the DNA Binding Domain of the yeast activator Gcn4. The plasmids were transformed into yeast strains containing GFP as a reporter gene downstream of a Gcn4-driven promoter.</p>
 <p><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/figure2.jpg" width="300" height="300" /></p>
-<p>Cells were FACS sorted based on their green fluorescence intensity and splitted into 4 bins of increasing fluorescence intensity and sent for sequencing.<p>
+<p>Cells were FACS sorted and collected into 4 bins of increasing green fluorescence intensity and sent for sequencing.<p>
 <p><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/figure3.jpg" width="300" height="300" /></p>
 <p>Sequencing was paired-end (Illumina), 100nt reads with 7nt overlap between read1 and read2.</p>
 <p>include figrue</p>
-<p>18 mutants from the library were individually expressed and the fluorescence intensity was measured. Scores were validated in this small set.</p> 
+<p>18 mutants from the library were individually expressed and their average fluorescence intensity was measured. Potential scores to use in regression analysis or to split the dataset into two or more classes were validated in this small set.</p> 
 <p>include figure</p>
-<p>Three experiments were conducted, using different promoters to activate transcription of a GFP reporter gene: ARG3, ARG1 and ILV6.</p> 
+<p>Finally, three experiments were conducted, using different promoters to activate transcription of the GFP reporter gene: ARG3, ARG1 and ILV6.</p> 
 
 
 ---
