@@ -23,7 +23,6 @@ About
 Data 
 ------
 
-Overview: 
 <img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/aws_tree.jpg" width="300" height="300" /><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/github_tree.jpg" width="300" height="300" /></p>
 
 ### Fastq files:
@@ -43,8 +42,7 @@ Overview:
     bin2: Sample\_CGAGGCT<br>
     bin3: Sample\_AAGAGGC<br>
     bin4: Sample\_GTAGAGG<br>
-    pre_sorting: Sample\_CGTACTA<br>
-
+    pre_sorting: Sample\_CGTACTA<br><br>
     bin1: Sample\_GGACTCC<br>
     bin2: Sample\_TAGGCAT<br>
     bin3: Sample\_CTCTCTA<br>
@@ -68,8 +66,7 @@ Overview:
     ARG1\_bin2.fasta<br>
     ARG1\_bin3.fasta<br>
     ARG1\_bin4.fasta<br>
-    ARG1\_presorting.fasta<br>
-
+    ARG1\_presorting.fasta<br><br>
     ILV6\_bin1.fasta<br>
     ILV6\_bin2.fasta<br>
     ILV6\_bin3.fasta<br>
@@ -93,7 +90,7 @@ Codes/Scripts
 --------------------
 All codes are stored in `s3:/fh-pi-hahn-s/Activators/codes` and if run without arguments will display HELP message.
 
-<span style="background-color:#33DAFF; color:black">FLASH\_wrapper.py</span>       --> Paires R1 and R2 from all experiments. 
+<p><span style="background-color:#33DAFF; color:black">FLASH\_wrapper.py</span>       --> Paires R1 and R2 from all experiments.</p>
 <span style="background-color:#33DAFF; color:black">translate.py</span>        --> Translates the paired reads into proteins. This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length
 <span style="background-color:#33DAFF: color:black">assign\_scores.py</span>      --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.
 <span style="background-color:#33DAFF; color:black">run\_usearch.sh</span>          --> runs programm usearch with predefined parameters. Different bins and pre\_sorting are clustered individualy, since the redundancy should have came to each of them separately.
