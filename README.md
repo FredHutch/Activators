@@ -89,13 +89,13 @@ hydrophobicity values for aa --> `s3://fh-pi-hahn-s/Activators/data/hydrophobici
 Codes/Scripts
 --------------------
 All codes are stored in `s3:/fh-pi-hahn-s/Activators/codes` and if run without arguments will display HELP message.
-``FLASH_wrapper.py``      --> Paires R1 and R2 from all experiments.<br>
-<span style="background-color:#DCDCDC; color:black">translate.py</span>        --> Translates the paired reads into proteins. This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length
-<span style="background-color:#33DAFF: color:black">assign_scores.py</span>      --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.
-<span style="background-color:#33DAFF; color:black">run_usearch.sh</span>          --> runs programm usearch with predefined parameters. Different bins and pre\_sorting are clustered individualy, since the redundancy should have came to each of them separately.
-<span style="background-color:#33DAFF; color:black">clusters.py</span>          --> Desicion of what sequences to take from usearch clusters.
-<span style="background-color:#33DAFF; color:black">external_software.sh</span> --> Runs external software: IUPred and PSIpred.
-<span style="background-color:#33DAFF; color:black">prepare4depp.py</span>     --> Prepare data for deep learning. Some of the centroids are probably under-represented in the library and we can consider them as noise. Hence, this script tries to make a more robust desicion on what sequence should be taken from each cluster.
+`FLASH_wrapper.py`      --> Paires R1 and R2 from all experiments.<br>
+`translate.py`        --> Translates the paired reads into proteins. This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length<br>
+`assign_scores.py`      --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.<br>
+`run_usearch.sh`          --> runs programm usearch with predefined parameters. Different bins and pre\_sorting are clustered individualy, since the redundancy should have came to each of them separately.<br>
+`clusters.py`          --> Desicion of what sequences to take from usearch clusters.<br>
+`external_software.sh` --> Runs external software: IUPred and PSIpred.<br>
+`prepare4depp.py`     --> Prepare data for deep learning. Some of the centroids are probably under-represented in the library and we can consider them as noise. Hence, this script tries to make a more robust desicion on what sequence should be taken from each cluster.<br>
 <span style="background-color:#33DAFF; color:black">simple\_lerners.py</span>      --> train and test random\_forest and logistic regression as benchmark to compare to models that incorporate sequential ordering.
 
 |   script name        |  input               | output                                                               |
