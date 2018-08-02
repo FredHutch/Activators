@@ -9,8 +9,7 @@ About
 <p></p>
 
 <p>Oligomers of DNA, consisting of 90 nucleotides were designed to randomly contain equal chance of any of the 20 amino-acids at each position. This 90 bp long randomized fragment is encoded in a plasmid (one or two copies of the plasmid per cell) upstream of the DNA Binding Domain of the yeast activator Gcn4. The plasmids were transformed into yeast strains containing GFPe as a reporter gene.</p>
-<p><object width="300" height="300" data="https://github.com/FredHutch/Activators/master/figures/figure2.pdf"></object></p>
-<p><img style="float: right;" src ="https://github.com/FredHutch/Activators/master/figures/figure2.pdf" width="300" height="300" /></p>
+<p><img style="float: right;" src ="https://github.com/FredHutch/Activators/master/figures/figure2.jpg" width="300" height="300" /></p>
 <p>Cells were FACS sorted based on their green fluorescence intensity and splitted into 4 bins of increasing fluorescence intensity and sent for sequencing.<p>
 <p><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/figure3.jpg" width="300" height="300" /></p>
 <p>Sequencing was paired-end (Illumina), 100nt reads with 7nt overlap between read1 and read2.</p>
