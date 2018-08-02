@@ -90,8 +90,8 @@ Codes/Scripts
 --------------------
 All codes are stored in `s3:/fh-pi-hahn-s/Activators/codes` and if run without arguments will display HELP message.
 
-<blockquote><div style="background-color:#33DAFF; color:black">FLASH_wrapper.py</div></blockquote>       --> Paires R1 and R2 from all experiments.</p>
-<span style="background-color:#33DAFF; color:black">translate.py</span>        --> Translates the paired reads into proteins. This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length
+<blockquote><div style="background-color:#DCDCDC; color:black">FLASH_wrapper.py</div></blockquote>       --> Paires R1 and R2 from all experiments.</p>
+<span style="background-color:#DCDCDC; color:black">translate.py</span>        --> Translates the paired reads into proteins. This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length
 <span style="background-color:#33DAFF: color:black">assign_scores.py</span>      --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.
 <span style="background-color:#33DAFF; color:black">run_usearch.sh</span>          --> runs programm usearch with predefined parameters. Different bins and pre\_sorting are clustered individualy, since the redundancy should have came to each of them separately.
 <span style="background-color:#33DAFF; color:black">clusters.py</span>          --> Desicion of what sequences to take from usearch clusters.
