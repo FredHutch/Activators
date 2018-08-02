@@ -25,7 +25,7 @@ Data
 
 <img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/aws_tree.jpg" width="300" height="300" /><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/github_tree.jpg" width="300" height="300" /></p>
 
-## Fastq files:
+### Fastq files:
 
 * Folder containing the Fastq files for **ARG3** --> `s3://fh-pi-hahn-s/Activators/data/151203/fastq/`
 <ul>
