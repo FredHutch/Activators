@@ -88,7 +88,7 @@ hydrophobicity values for aa --> `s3://fh-pi-hahn-s/Activators/data/hydrophobici
 ---
 Codes/Scripts
 --------------------
-All codes are stored in `s3:/fh-pi-hahn-s/Activators/codes` and if run without arguments will display HELP message.
+All codes are stored in *s3:/fh-pi-hahn-s/Activators/codes* and if run without arguments will display HELP message.<br><br>
 `FLASH_wrapper.py`      --> Paires R1 and R2 from all experiments.<br>
 `translate.py`        --> Translates the paired reads into proteins. This script filters the data for early-stops, lack of 5'/3' primers, frame shifts, low quality and short length<br>
 `assign_scores.py`      --> library to use in other scripts. Assigns scores based on experimental values specified within the short script.<br>
