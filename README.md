@@ -24,7 +24,7 @@ Data
 ------
 
 Overview: 
-<img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/aws_tree.pdf" width="300" height="300" /><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/github_tree.jpg" width="300" height="300" /></p>
+<img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/aws_tree.jpg" width="300" height="300" /><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/github_tree.jpg" width="300" height="300" /></p>
 
 ### Fastq files:
 
