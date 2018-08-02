@@ -25,7 +25,7 @@ Data
 
 <img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/aws_tree.jpg" width="300" height="300" /><img style="float: right;" src ="https://github.com/FredHutch/Activators/blob/master/figures/github_tree.jpg" width="300" height="300" /></p>
 
-### Fastq files:
+## Fastq files:
 
 * Folder containing the Fastq files for **ARG3** --> `s3://fh-pi-hahn-s/Activators/data/151203/fastq/`
 <ul>
@@ -60,7 +60,8 @@ Data
     ARG3_bin4.fasta<br>
     ARG1_presorting.fasta<br>
 </ul>
-**ARG1** & **ILV6**: `s3://fh-pi-hahn-s/Activators/data/170413/protein_fasta`
+
+**ARG1** \& **ILV6**: `s3://fh-pi-hahn-s/Activators/data/170413/protein_fasta`
 <ul>
     ARG1_bin1.fasta<br>
     ARG1_bin2.fasta<br>
@@ -76,14 +77,14 @@ Data
 
 ### centroids after redundancy filtering (usearch)
 
-**ARG3**:                `s3://fh-pi-hahn-s/Activators/data/151203/centroids_usearch` <br>
-**ARG1** and **ILV6**:   `s3://fh-pi-hahn-s/Activators/data/170413/centroids_usearch`
+&emsp; **ARG3**:                `s3://fh-pi-hahn-s/Activators/data/151203/centroids_usearch` <br>
+&emsp; **ARG1** and **ILV6**:   `s3://fh-pi-hahn-s/Activators/data/170413/centroids_usearch`
 
 ### Experimental Fluorescence measurements used to calculate scores to use in regression models and potentially to split data-set into positives and negatives. 
-`s3://fh-pi-hahn-s/Activators/data/`
+&emsp; `s3://fh-pi-hahn-s/Activators/data/`
 
 ### Additional data to use as predictors
-hydrophobicity values for aa --> `s3://fh-pi-hahn-s/Activators/data/hydrophobicities.txt`
+&emsp; hydrophobicity values for aa --> `s3://fh-pi-hahn-s/Activators/data/hydrophobicities.txt`
 
 ---
 Codes/Scripts
