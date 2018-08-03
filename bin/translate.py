@@ -3,7 +3,7 @@
 	could be lost if not specified a file as output: MAKE THE NECESARY MODIFICATIONS!! 
 	
 	NOTE: The run takes ~30 min in 2 cpus from rhino. Parallelize it with multiprocessing or even splitting the files in bash and run the subfiles
-	in different cpus?
+	in different cpus? (or re-write in c?)
 '''
 
 import numpy as np
