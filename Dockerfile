@@ -1,5 +1,7 @@
 # build as fredhutch/activators
 
+# this is the Dockerfile for step 3 of the pipeline
+
 FROM idealo/nvidia-docker-keras
 
 RUN apt-get update -y && apt-get install -y curl unzip

@@ -1,0 +1,65 @@
+# build me as fredhutch/activators-step-1:
+# docker build -f Dockerfile.step1 -t fredhutch/activators-step-1 .
+
+
+# Dockerfile for step 1 of the pipeline
+
+
+# Note, usearch is also required, but because it is not free/licensed (and because this
+# image will be stored in the public docker hub), we do not add it to this image,
+# instead we download it at runtime from an access-restricted S3 bucket.
+# s3://fh-pi-hahn-s/activators-tools/usearch
+
+FROM ubuntu:16.04
+
+RUN apt-get update -y
+
+RUN apt-get install -y software-properties-common 
+
+RUN curl -LO http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/psipred.4.01.tar.gz
+
+RUN tar zxf psipred.4.01.tar.gz
+
+WORKDIR psipred/src
+
+RUN make && make install
+
+RUN cp ../bin/* /usr/local/bin/
+
+WORKDIR /
+
+RUN rm -rf psipred*
+
+# ncbi tools
+
+RUN curl -O ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/ncbi.tar.gz
+
+RUN tar zxf ncbi.tar.gz
+
+# no idea what to do now....
+
+
+
+
+
+RUN add-apt-repository -y ppa:deadsnakes/ppa
+RUN apt-get update -y
+RUN apt-get install -y python3.6 curl unzip git ncbi-blast+
+
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3.6
+
+RUN pip3.6 install awscli
+
+RUN curl -LO http://ccb.jhu.edu/software/FLASH/FLASH-1.2.11-Linux-x86_64.tar.gz
+
+RUN tar zxf FLASH-1.2.11-Linux-x86_64.tar.gz
+
+RUN cp FLASH-1.2.11-Linux-x86_64/flash /usr/local/bin/
+
+RUN rm -rf FLASH-1.2.11-Linux-x86_64*
+
+RUN curl -L https://raw.githubusercontent.com/FredHutch/url-fetch-and-run/master/fetch-and-run/fetch_and_run.sh > /usr/local/bin/fetch_and_run.sh
+
+RUN chmod +x /usr/local/bin/fetch_and_run.sh
+
+ENTRYPOINT ["/usr/local/bin/fetch_and_run.sh"]

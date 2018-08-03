@@ -1,0 +1,34 @@
+# build me as fredhutch/activators-step-2:
+# docker build -f Dockerfile.step2 -t fredhutch/activators-step-2 .
+
+
+# Dockerfile for step 2 of the pipeline
+
+FROM ubuntu:16.04
+
+RUN apt-get update -y
+
+RUN apt-get install -y software-properties-common 
+
+RUN add-apt-repository -y ppa:deadsnakes/ppa
+RUN apt-get update -y
+RUN apt-get install -y python3.6 curl unzip git
+
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3.6
+
+RUN pip3.6 install awscli
+
+# iupred and psipred
+
+# iupred is not free so we don't install it here, but download it
+# from a restricted-access S3 bucket at runtime.
+# s3://fh-pi-hahn-s/activators-tools/iupred.tar.gz
+
+
+
+
+RUN curl -L https://raw.githubusercontent.com/FredHutch/url-fetch-and-run/master/fetch-and-run/fetch_and_run.sh > /usr/local/bin/fetch_and_run.sh
+
+RUN chmod +x /usr/local/bin/fetch_and_run.sh
+
+ENTRYPOINT ["/usr/local/bin/fetch_and_run.sh"]
