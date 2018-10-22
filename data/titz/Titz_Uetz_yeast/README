@@ -1,0 +1,30 @@
+Titz et al. 2006 NAR
+
+Description:
+Authors analyzed ~6000 yeast proteins and measure their transcription activity. At the end they came with ~451 transcription activators. After cleaning and removing empty records we have 371 sequences with transcription activation measurements (file: /home/lukaskoz/Dropbox/Gottingen/Titz_Uetz_yeast/cleaned_TA.csv)
+
+
+Goal:
+Check if there is correlation between PWM and second model (5 rules) to data provided in Titz et al.
+
+Details:
+1) Data from supplement of Titz et al. had been processed and gave dataset of 371 proteins (cleaned_TA.csv)
+2) They were mapped to sequences from SGD (http://www.yeastgenome.org) (titz.fasta)
+
+
+Moreover, for 5rules, we need:
+1) pI                   IPC titz.fasta.pI.txt
+2) secondary structure  titz.PSIPRED_ss_fast.fasta (done with castrated PSIPRED), (done with standard PSIPRED using nr90filt)
+3) charge               (calculated in place)
+4) disorder (RONN)      titz.RONN_disorder.fasta
+5) hydrophobicity       Kyte & Doolittle index (calculated in place)
+6) aromaticity          (calculated in place)
+7) solvent acc          titz.netsurfp_ss_acc.fasta
+
+Additional features to check:
+- CAI -codon adaptation index (this would be good as it also takes into account DNA level and bias in translation speed depending the codons)
+- frequencies of certain amino acids: Asp, Glu, Pro, Asp, ...
+- di- and tripeptides frequencies ???? (as proposed by Norman Davey, guy behind "ELM—the database of eukaryotic linear motifs")
+
+
+Algorithm for obtaining k-mers distribution in bakground vs. foreground from NGS data.
